@@ -1,0 +1,4 @@
+<% common_parameters = "--verbose --strict --publish-quiet --no-source --color --format pretty --require support --require features/step_definitions --expand" %>
+
+default: <%= common_parameters %> --tags 'not @wip'
+report:  <%= common_parameters %> --format html --out test-reports/<%= Time.now.strftime("%Y-%m-%d_%H:%M:%S") %>_report.html
